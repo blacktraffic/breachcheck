@@ -11,11 +11,14 @@ ln -s pwned-passwords-ntlm-ordered-by-hash-v5 allbreach.txt
 Usage: 
 
 $ echo guessme | python3 breach.py
+
 Found 'guessme' in breach list
 
 $ echo guessme | python3 convert-to-ntlm.py
+
 3046cf4e584c9efd33b72e382c7dee6c
 
 $ echo 3046cf4e584c9efd33b72e382c7dee6c | python3 breach-ntlm.py
+
 Found '3046cf4e584c9efd33b72e382c7dee6c' in breach list
 
