@@ -8,7 +8,7 @@ Get and expand the HIBP data [https://downloads.pwnedpasswords.com/passwords/pwn
 
 $ haveibeenpwned-downloader -n pwnedpasswords_ntlm.txt
 
-ln -s pwned-passwords-ntlm-ordered-by-hash-v5.txt pwnedpasswords_ntlm.txt 
+( wait a bit - should donwload all the NTLM hashes in the form   hash:number of occurrences ) 
 
 Usage: 
 
