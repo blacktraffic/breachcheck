@@ -4,9 +4,11 @@ Checks if your AD hashes are in the HIBP breach
 
 I've provided an sgrep binary, compiled on kali rolling. If that doesn't work for you, get and compile sgrep, aka 'sorted grep' here: https://sourceforge.net/projects/sgrep/files/latest/download 
 
-Get and expand the HIBP data https://downloads.pwnedpasswords.com/passwords/pwned-passwords-ntlm-ordered-by-hash-v5.7z
+Get and expand the HIBP data [https://downloads.pwnedpasswords.com/passwords/pwned-passwords-ntlm-ordered-by-hash-v5.7z](https://github.com/HaveIBeenPwned/PwnedPasswordsDownloader) (new way of getting the data).
 
-ln -s pwned-passwords-ntlm-ordered-by-hash-v5.txt allbreach.txt 
+$ haveibeenpwned-downloader -n pwnedpasswords_ntlm.txt
+
+ln -s pwned-passwords-ntlm-ordered-by-hash-v5.txt pwnedpasswords_ntlm.txt 
 
 Usage: 
 
@@ -21,9 +23,3 @@ $ echo guessme | python3 convert-to-ntlm.py
 $ echo 3046cf4e584c9efd33b72e382c7dee6c | python3 breach-ntlm.py
 
 Found '3046cf4e584c9efd33b72e382c7dee6c' in breach list
-
-
-If you want to augment the HIBP data (as I have), do a cut -f1 -d':' on it, then cat that and your further words, pipe through python3 convert-to-ntlm.py | sort -u > augmented.txt
-
-And then move augmented back over the top of allbreach.txt 
-
