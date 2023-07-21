@@ -4,7 +4,7 @@ Checks if your AD hashes are in the HIBP breach
 
 I've provided an sgrep binary, compiled on kali rolling. If that doesn't work for you, get and compile sgrep, aka 'sorted grep' here: https://sourceforge.net/projects/sgrep/files/latest/download 
 
-Get and expand the HIBP data [https://downloads.pwnedpasswords.com/passwords/pwned-passwords-ntlm-ordered-by-hash-v5.7z](https://github.com/HaveIBeenPwned/PwnedPasswordsDownloader) (new way of getting the data).
+Get and expand the HIBP data: See https://github.com/HaveIBeenPwned/PwnedPasswordsDownloader (new way of getting the data).
 
 $ haveibeenpwned-downloader -n pwnedpasswords_ntlm.txt
 
